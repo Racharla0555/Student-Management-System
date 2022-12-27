@@ -1,0 +1,88 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="{%static 'style.css'%}">
+    <style>
+        .form-group{
+         font-text:40px;
+        }
+
+        .as1 {
+            position:absolute;
+            top:60px;
+            width:200px;
+            height:50px;
+            box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+            transition-duration: 0.4s;
+          }
+          
+          .as1:hover {
+            background-color: #3d2068;
+            color: white;
+          }
+          .as2 {
+            position:absolute;
+            top:45%;
+            width:200px;
+            height:50px;
+            box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+            transition-duration: 0.4s;
+          }
+          
+          .as2:hover {
+            background-color: #3d2068; /* Green */
+            color: white;
+          }
+          
+
+
+     </style>
+</head>
+<body>
+  <h1 style="font-family: Gill Sans, sans-serif; font-size: 40px; position:absolute; top:20%;left:20%;" >COMPUTER SCIENCE AND ENGINEERING</h1>
+   <a href="\home" > <img style="position: absolute; top: 25px; left: 25px; max-width: 20%;" src="https://anurag.edu.in/wp-content/uploads/2020/02/logo-1.png" alt=""></a>
+    <img style="position: absolute; bottom: 5px; left: 5px; max-width: 40%;" src="https://res.cloudinary.com/djvw53udn/image/upload/v1670861886/Web-development_-programmer-engineering-and-coding-website-on-augmented-reality-interface-screens-on-transparent-background-PNG-removebg_hkfb4f.png" alt="">
+    <center style="position:absolute;top:50%;left:50%;" >
+        {%block main%}
+      
+        <a href="/addstudent"><button class="as1" type="button">Add Student </button></a>
+        <a href="/viewstudent"><button class="as2" type="button">View Students </button></a>
+        {%endblock%}
+    </center>
+
+            
+    <style>
+      .button2 {
+border: none;
+color: rgb(0, 0, 0);
+padding: 16px 32px;
+text-align: center;
+text-decoration: none;
+display: inline-block;
+font-size: 16px;
+font-family: Helvetica;
+font-weight: bold;
+margin: 4px 2px;
+transition-duration: 0.4s;
+cursor: pointer;
+border-radius: 12%;
+position: absolute;
+top: 5%;
+right: 5%;
+}
+.button2:hover {
+background-color: #900000;
+color: white;
+}
+  </style>
+
+  <a href="/logout"><button class="button2" type="button2">Log out</button></a>
+
+</body>
+</html>

@@ -1,0 +1,53 @@
+{%extends 'inf.html'%}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+</head>
+<body>
+    
+
+{%block main%}
+<style>
+  .t{
+    position: absolute;
+    top: 50%;
+    left:17%;
+  
+  }
+  
+  </style>
+<div class="t">
+    <table  >
+      {%for i in stud%}
+      <tr>
+          <td >
+              {{i.name}}
+  
+          </td>
+          <td>
+          <a href="/view/{{i.id}}"><button class="as" type="button">View</button></a>
+  
+          </td>
+          <td>
+          <a href="/del/{{i.id}}"><button class="as" type="button">Delete</button></a>
+  
+          </td>
+          
+      </tr>
+      {%endfor%}
+    </table>
+  </div>
+{%endblock%}
+
+    
+
+
+</body>
+</html>

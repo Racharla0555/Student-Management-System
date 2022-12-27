@@ -1,0 +1,27 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SignUp</title>
+    <link rel="stylesheet" href="{%static 'fstyles.css'%}">
+</head>
+<body style="background-color: white;
+text-align: center;">
+<img class="img3" src="https://res.cloudinary.com/djvw53udn/image/upload/v1670862665/favpng_teacher-icon-design-avatar_gd6bbj.png" alt="">
+{%for i in messages%}
+<font  color="red" >*{{i}}</font> 
+{%endfor%}
+<form method="post">
+    {%csrf_token%}
+    <label for="chk" aria-hidden="true">Sign up</label>
+    <input type="text" name="username" placeholder="Username" required="">
+    <input type="email" name="email" placeholder="Email" required="">
+    <input type="password" name="password" placeholder="Password" required="">
+    <button>Sign up</button>
+</form>
+
+</body>
+</html>

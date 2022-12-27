@@ -1,0 +1,27 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SignUp</title>
+    <link rel="stylesheet" href="{%static 'fstyles.css'%}">
+</head>
+<body style="background-color: white;
+text-align: center;">
+<img style="max-width: 30%;"  class="img3" src="https://lh3.googleusercontent.com/UPxkFG1CB3osrYITdPVKenewP4GHGR_zmeCl4-D8xsMxQNgYpH8JMcqfmLmRh1jdCJmJleTIvKxQeuoPwQ9N6TNdlnxgA1lY3N8Lb0iAUxulCzxJFyGPlGY5NCLZduHLsYJbV1dA0TZ4YmLTvuZyYVAUFA6Fa6AFZPWbzf-0KCTX88fNgS1suLrgNGGIc6j7aUMh_-F9g__6y_Rua796aeV1v6oby22TpVzhGVZj5GSgKRE89BXRHvymqOREwSTk1nbDg4pQwe7zhdMUa3k8ONRXd6m51y15TxLhmFy4jQfNCI_XgFAco4Q3-uWViJW6Ied6BCyH6Qg-8upygdkmgfF0dMWbRsjFImNEmbCu_6mZFvIl5odUYMLjMKFCe7LffuVhWf5jUnu92cml8KlxD3IUG-O5hcZD40W3bbnQsJa24Se6KJw5nmY3lcDi6YI8rh53l3G06KmonKH_S0QW3g9PMOXVltMrbuN9DO2HW6EqI5y6ENgs7GD9eP293tVWE5LjW3fjH-Tj1AoKmr__HdlcScDjeymMvtF00_RaEd1uX7E4XUfIXeCS7M9D2hRGgF8cl-EssOJIA_sjrmxFSTmJpDOe4oZwtNgEu6YWgEvjrbn55sjak-2R_Mn_Ur02bOOi2_Tts_d0pbSMBlnwHBEJODaSivnA10XJ3JOQh5kf6ykU4fmhWkDATiqQajfn1NLc0jrGjVJWKY_JtujezhVeyKkqdiidEGADCBCSKogib1h6GpbbqK0zC9LCUSm2GckRrze_2fQgpzgg-kiieFmUxFwpcPbCxExmBTj8qRRfhfmrgJbzCpzPEZ1MnVLw3BfCtuzime800WgbGUlgRmIcFF7eZ5l5qMj7g-YSIU9fQxf5q3EqDCzWO-MPxH0mDJ_S6is-w2P9S-8ZEDGz98YQV2wHv19u4XzO74Jwmdhiri_uYWLAvFgUPyO7YEp2_WBho_t2IZflZnAn4qH9DcvN-bTAaDXl58DQoSCl6J4pT-cB2wAy87rlGPc=s1500-no?authuser=0" alt="">
+{%for i in messages%}
+<font  color="red" >*{{i}}</font> 
+{%endfor%}
+<form method="post">
+    {%csrf_token%}
+    <label for="chk" aria-hidden="true">Sign up</label>
+    <input type="text" name="username" placeholder="Username" required="">
+    <input type="email" name="email" placeholder="Email" required="">
+    <input type="password" name="password" placeholder="Password" required="">
+    <button>Sign up</button>
+</form>
+
+</body>
+</html>

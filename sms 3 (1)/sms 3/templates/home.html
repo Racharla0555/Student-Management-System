@@ -1,0 +1,87 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="{%static 'home.css'%}">
+
+    </head>
+    <body>
+        
+        <ul class="ul1" >
+            <li><a href="#" class="active">
+            <i class="fas fa-home icon"></i>
+            AGRICULTURE</a>
+        </li>
+        <li><hr class="dropdown-divider"></li>
+            <li><a href="#">
+            <i class="fas fa-rss icon"></i>
+            PHARMACY</a></li>
+            <li>
+                <li><hr class="dropdown-divider"></li>
+            <i class="fas fa-address-book icon"></i>
+                    ENGINEERING
+        
+  
+                  <li><a class="dropdown-item" href="/cse">Computer Science and Engineering</a></li>
+                  <li><a class="dropdown-item" href="/it">Information Technology</a></li>
+                  <li><a class="dropdown-item" href="/ece">Electronics  and Communication Engineering</a></li>
+                  <li><a class="dropdown-item" href="/civ">Civil Engineering</a></li>
+                  {% comment %} <li><a class="dropdown-item" href="/eee">Electrical & Electronics Engineering</a></li> {% endcomment %}
+                  <li><a class="dropdown-item" href="/mec">Mechanical Engineering</a></li>
+                  <li><hr class="dropdown-divider"></li>
+            <li>
+            <i class="fas fa-user icon"></i>
+            MANAGEMENT</li>
+            <li><a class="dropdown-item" href="#">Bachelor of Bussiness Administraion</a></li>
+            <li><a class="dropdown-item" href="#">Masters of Bussiness Administraion</a></li>
+            <li><a class="dropdown-item" href="#"></a></li>
+
+            
+            
+        </ul>
+        
+        
+        
+        
+        
+        
+        
+      
+        
+        <a href="/home"><img class="aupng" src="https://anurag.edu.in/wp-content/uploads/2020/02/logo-1.png" alt=""></a>
+        <img class="img4" src="https://res.cloudinary.com/djvw53udn/image/upload/v1670862103/The_top_5_benefits_of_a_time_management_system_in_schools_of_all_sizes-removebg_myaxjp.png" alt="">
+        
+        <style>
+            .button2 {
+    border: none;
+    color: rgb(0, 0, 0);
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    font-family: Helvetica;
+    font-weight: bold;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    border-radius: 12%;
+    position: absolute;
+    top: 5%;
+    right: 5%;
+}
+.button2:hover {
+    background-color: #900000;
+    color: white;
+}
+        </style>
+
+        <a href="/logout"><button class="button2" type="button2">Log out</button></a>
+        
+    
+</body>
+</html>

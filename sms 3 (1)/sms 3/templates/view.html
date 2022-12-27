@@ -1,0 +1,75 @@
+{%extends 'cse 2.html'%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<body>
+    
+
+{%block main%}
+<style>
+  .t{
+    font-size: 30px;
+  }
+
+
+</style>
+<div>
+  <table class="t">
+    {%for i in stud%}
+    <tr>
+        <td>
+            {{i.name}}
+
+        </td>
+        <td>
+        <a href="/view/{{i.id}}"><button class="as" type="button">View</button></a>
+
+        </td>
+        <td>
+        <a href="/del/{{i.id}}"><button class="as" type="button">Delete</button></a>
+
+        </td>
+        
+    </tr>
+    {%endfor%}
+  </table>
+</div>
+{%endblock%}
+
+    
+        
+<style>
+  .button2 {
+border: none;
+color: rgb(0, 0, 0);
+padding: 16px 32px;
+text-align: center;
+text-decoration: none;
+display: inline-block;
+font-size: 16px;
+font-family: Helvetica;
+font-weight: bold;
+margin: 4px 2px;
+transition-duration: 0.4s;
+cursor: pointer;
+border-radius: 12%;
+position: absolute;
+top: 5%;
+right: 5%;
+}
+.button2:hover {
+background-color: #900000;
+color: white;
+}
+</style>
+
+<a href="/logout"><button class="button2" type="button2">Log out</button></a>
+
+</body>
+</html>

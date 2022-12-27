@@ -1,0 +1,76 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .exi{
+            margin-left:190px;
+        
+        }
+        label{
+            width:200px;
+            margin:5px;
+        }
+        button{
+            margin-top: 20px;
+            margin-left:180px;
+        }
+       font{
+        margin:30px;
+       }
+       .main {
+    background-color: #c4dcec;
+    background-size: cover;
+    border-color: blue;
+    border-width: 3px;
+    border-style:double;
+    border-radius: 15px;
+    width: 750px;
+    height: auto;
+}
+.container{
+    margin-left:350px;
+}
+form{
+    margin-left: 150px;
+}
+    </style>
+</head>
+<body>
+    <div class="container" >
+        <div class="main">
+            <h1 align="center">Fill Details</h1>
+            {%if messages%}
+        {%for message in messages%}
+        <font class="exi" color=red>⦿{{message}}</font>
+        {%endfor%}
+        {%endif%}
+            <form  method="post" enctype="multipart/form-data">
+    
+                {%csrf_token%}
+                {%for field in form%}
+                <div>
+                    <label>{{field.label}}:</label>
+                <label >{{field}}</label><br>
+                {%for error in field.errors%}
+                  <font color="red">⦿{{error}}</font> <br>
+                 
+                   {%endfor%}
+                </div>
+                {%endfor%}
+                
+                <button type="submit" class="btn btn-success">Submit</button>
+                
+               </form>
+               
+        </div>
+        
+</div>
+</body>
+</html>
+
+
